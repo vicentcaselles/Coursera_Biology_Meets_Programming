@@ -7,6 +7,8 @@ import numpy as np
 P = np.array([[0.2, 0.2, 0, 0, 0, 0, 0.9, 0.1, 0.1, 0.1, 0.3, 0], [0.1,0.6,0,0,0,0,0,0.4,0.1,0.2,0.4,0.6],
               [0,0,1,1,0.9,0.9,0.1,0,0,0,0,0], [0.7,0.2,0,0,0.1,0.1,0,0.5,0.8,0.7,0.3,0.4]])
 
+
+# function to calculate entropy from a probability array
 H = 0
 for i in range(12):
     for j in range(4):
@@ -16,7 +18,7 @@ for i in range(12):
             H += -(P[j, i] * math.log(P[j,i], 2))
 print(H)
 
-# Motif count
+# Function to count the number of nucleotide occurrences in a sequence (input)
 def MotifCount(input):
     counts = {}
     for symbol in "ACTG":
@@ -36,7 +38,7 @@ def MotifCount(input):
     return counts
 
 
-#Motif Profile
+#create a profile from the nucleotide counts
 def MotifProfile(input):
     counts = {}
     for symbol in "ACTG":
@@ -58,6 +60,8 @@ def MotifProfile(input):
             counts[i][j] = counts[i][j]/len(input)
     return counts
 
+  
+# function to obtain the consensus sequence from a list of motifs
 def ConsensusMotif(Motifs):
     counts = MotifCount(Motifs)
     consensus = ""
@@ -83,7 +87,6 @@ def Score(Motifs):
 
 # function to calculate the probability of finding a sequence, given a profile of nucleotide probabilities
 # for a consensus region
-
 
 def computeprobability(Text, Profile):
     prob = 1

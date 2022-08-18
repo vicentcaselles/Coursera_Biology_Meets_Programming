@@ -1,2 +1,2 @@
 # Coursera_Biology_Meets_Programming
-My code for the course titled "Biology meets Programming"
+My code for the course titled "Biology meets Programming", by Pavel Pevzner and Phillip Compeau (https://www.coursera.org/learn/bioinformatics). In this course, I gained experience in programming with Python, developing code to find frequent patterns and motifs in DNA sequences in order to find the Ori position in the genome and circadian clock related genes. All code is done by me unless stated otherwise.
